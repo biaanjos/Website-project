@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey</title>
+        <meta name="author" content="Beatriz">
+        <meta name="description" content="project phase 1">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <h1>Toronto Travel Guide</h1>
+            <hr>
+        </header>
+        <nav>
+            <strong><a href="Home.html"><img src="images/Home.png" width="40"></a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong><a href="ThingsToDo.html">Things to do</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong><a href="WhereToStay.html">Where to stay</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong><a href="WhereToEat.html">Where to eat</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong><a href="WhenToGo.html">When to go</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong><a href="HowToGetAround.html">How to get around</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong><a href="Survey.html">Survey</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong><a href="ContactUs.html">Contact us</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <hr>
+        </nav>
+        <main> <!--form-->
+            <h2><u>Survey</u></h3>
+            <h3><i>Help us to improve our guide!</i></h3>
+            <br>
+            <form name = "form1" method = "GET" action="Submitpage.html" >
+                <label for="t1">Age: </label>
+                <input type="number" name="age" id="t1" min="16" max="90" required><br>
+                <label for="r1">Rate your experience: </label>
+                <input type ="range" id="r1" min=0 max=10  value="0"><br><br>
+                <fieldset>
+                    <legend>Select your favourite topic:</legend>
+                    <select name="topic" size="5">
+                            <option selected>Things to do</option>
+                            <option>Where to stay</option>
+                            <option>Where to eat</option>
+                            <option>When to go</option>
+                            <option>How to get around</option>
+                    </select>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>How often do you travel?</legend>
+                    <input type="radio" name="answer" value="1a2" id="r1a">
+                    <label for="r1a">1 a 2 times a year</label><br>
+                    <input type="radio" name="answer" value="2a3" id="r2a">
+                    <label for="r2a">2 a 3 times a year</label><br>
+                    <input type="radio" name="answer" value="3a4" id="r3a">
+                    <label for="r3a">3 a 4 times a year</label><br>
+                    <input type="radio" name="answer" value="more4" id="r4a">
+                    <label for="r4a">More than 4 times a year</label><br>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>How do you choose your destination?</legend>
+                    <input type="checkbox" name="CHK1" value="internet" id="c1a">
+                    <label for="c1a">Internet</label><br>
+                    <input type="checkbox" name="CHK2" value="agencies" id="c2a">
+                    <label for="c2a">Travel agencies</label><br>
+                    <input type="checkbox" name="CHK3" value="guides" id="c3a">
+                    <label for="c3a">Tourist guides</label><br>
+                 </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Select other topics of interest:</legend>
+                    <input type="checkbox" name="CHK1" value="tcost" id="c1">
+                    <label for="c1">Travel Costs</label><br>
+                    <input type="checkbox" name="CHK2" value="packl" id="c2">
+                    <label for="c2">Packing list</label><br>
+                    <input type="checkbox" name="CHK3" value="shgu" id="c3">
+                    <label for="c3">Shopping guides</label><br>
+                    <input type="checkbox" name="CHK4" value="fest" id="c4">
+                    <label for="c4">Festivals</label><br>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>How did you hear about us?</legend>
+                    <input type="radio" name="answer" value="friend" id="r1">
+                    <label for="r1">Friend</label><br>
+                    <input type="radio" name="answer" value="google" id="r2">
+                    <label for="r2">Google</label><br>
+                    <input type="radio" name="answer" value="insta" id="r3">
+                    <label for="r3">Instagram</label><br>
+                    <input type="radio" name="answer" value="travelsite" id="r4">
+                    <label for="r4">Another travel website</label><br>
+                </fieldset>
+                <br>
+                <p>Your suggestions:</p>
+                <textarea name="comments" rows="10" cols="30" required></textarea><br><br>
+                <input type="reset" name="button2" value="Reset">
+                <input type="submit" name="button1" value="Submit survey"><br><br><hr>
+            </form>
+            <br><br>
+        </main>
+        <footer>
+            Copyright &copy; 2021 - Agency Travel Guide 
+            <hr>
+            <address>
+                <p>134 Younge Street, Toronto - Ontario</p>
+            </address>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us</title>
+        <meta name="author" content="Beatriz">
+        <meta name="description" content="project phase 1">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <h1>Toronto Travel Guide</h1>
+            <hr>
+        </header>
+        <nav>
+            <strong><a href="Home.html"><img src="images/Home.png" width="40"></a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong><a href="ThingsToDo.html">Things to do</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong><a href="WhereToStay.html">Where to stay</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong><a href="WhereToEat.html">Where to eat</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong><a href="WhenToGo.html">When to go</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong><a href="HowToGetAround.html">How to get around</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong><a href="Survey.html">Survey</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong><a href="ContactUs.html">Contact us</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <hr>
+        </nav>
+        <main>
+            <h2><u>Contact us</u></h2>
+            <form name = "form1" method = "GET" action="Submitpage.html" >
+                <label for="t1">First Name: </label>
+                <input type="text" name="fn" id="t1" maxlength="20"><br>
+                <label for="t2">Last Name: </label>
+                <input type="text" name="ln" id="t2" maxlength="20" placeholder="only one last name"><br>
+                <label for="t3">E-mail: </label>
+                <input type="email" name="em"  id="t3" required><br>
+                <p>Your comments here:</p>
+                <textarea name="comments" rows="10" cols="30" required></textarea><br><br>
+                <input type="reset" name="button2" value="Reset">
+                <input type="submit" name="button1" value="Click here to submit"><br><br><hr>
+            </form>
+            <br><br>
+        </main>
+        <footer>
+            Copyright &copy; 2021 - Agency Travel Guide 
+            <hr>
+            <address>
+                <p>134 Younge Street, Toronto - Ontario</p>
+            </address>
+        </footer>
+    </body>
+</html>
