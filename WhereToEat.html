@@ -5,42 +5,68 @@
         <meta name="author" content="Beatriz">
         <meta name="description" content="project phase 1">
         <meta charset="UTF-8">
+        <link href="main.css" rel="stylesheet">
+        <style>
+             table{
+                background-color:lightsteelblue;
+                border-style: double;
+                border-radius: 10px 10px 10px 10px;
+                box-shadow: 4px 4px 4px 4px lightslategrey;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            ul>li{
+                font-size: medium;
+                color: gray;
+            }
+            td.title{
+                color: royalblue;
+                font-variant: small-caps;
+                text-align: center;
+                font-weight: bold;
+                text-decoration: royalblue underline overline;
+            }
+            td>img{
+                width: 270px;
+            }
+            @media screen and (max-width:600px){
+                table{
+                   background-color: lightpink;
+                }
+            }
+        </style>
     </head>
     <body>
         <header>
             <h1>Toronto Travel Guide</h1>
-            <hr>
         </header>
         <nav>
-            <strong><a href="Home.html"><img src="images/Home.png" width="40"></a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="ThingsToDo.html">Things to do</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="WhereToStay.html">Where to stay</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="WhereToEat.html">Where to eat</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="WhenToGo.html">When to go</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="HowToGetAround.html">How to get around</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="Survey.html">Survey</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="ContactUs.html">Contact us</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <hr>
+            <ul class="menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="ThingsToDo.html">Things to do</a></li>
+                <li><a href="WhereToStay.html">Where to stay</a></li>
+                <li><a href="WhereToEat.html">Where to eat</a></li>
+                <li><a href="WhenToGo.html">When to go</a></li>
+                <li><a href="HowToGetAround.html">How to get around</a></li>
+                <li><a href="Survey.html">Survey</a></li>
+                <li><a href="ContactUs.html">Contact us</a></li>
+            </ul><br>
         </nav>
         <main>
-            <h2><u>Where to eat</u></h2>
-            <table border="1">
+            <h2>Where to eat</h2>
+            <table>
                 <tr>
-                    <td colspan="3"><b>Restaurants in Toronto</b></td>
+                    <td class="title" colspan="3">Restaurants in Toronto</td>
                 </tr>
                 <tr>
-                    <td>
-                        <br><b>Fast food</b><br><br>
-                        <img src="images/burger.jpg" width="270">
-                    </td>
-                    <td>
-                        <br><b>International cuisine</b><br><br>
-                        <img src="images/internationalfood.jfif" width="270">
-                    </td>
-                    <td>
-                        <br><b>Healthy food</b><br><br>
-                        <img src="images/healthy.jpg" width="270">
-                    </td>
+                    <td class="title">Fast food</td>
+                    <td class="title">International cuisine</td>
+                    <td class="title">Healthy food</td>
+                </tr>
+                <tr>
+                    <td><img src="images/burger.jpg"></td>
+                    <td><img src="images/internationalfood.jfif"></td>
+                    <td><img src="images/healthy.jpg"></td>
                 </tr>
                 <tr>
                     <td>
@@ -55,12 +81,12 @@
                     </td>
                     <td>
                         <ul>
-                            <li><b>Good Karma</b> - Indian</li>
-                            <li><b>Gare de L’est brasserie</b> - French</li>
-                            <li><b>Bacan</b> - Argentinian</li>
-                            <li><b>Campechano</b> - Mexican</li>
-                            <li><b>African palace</b> - East-African</li>
-                            <li><b>Tibet Kitchen</b> - Tibetan/Himalayan</li>
+                            <li>Good Karma - Indian</li>
+                            <li>Gare de L’est brasserie - French</li>
+                            <li>Bacan - Argentinian</li>
+                            <li>Campechano - Mexican</li>
+                            <li>African palace - East-African</li>
+                            <li>Tibet Kitchen - Tibetan/Himalayan</li>
                         </ul>
                     </td>
                     <td>
@@ -77,11 +103,9 @@
             </table>
         </main><br><br>
         <footer>
-            Copyright &copy; 2021 - Agency Travel Guide 
             <hr>
-            <address>
-                <p>134 Younge Street, Toronto - Ontario</p>
-            </address>
+            Copyright &copy; 2021 - Agency Travel Guide 
+            <address>134 Younge Street, Toronto - Ontario</address>
         </footer>
     </body>
 </html>

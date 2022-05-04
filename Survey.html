@@ -5,63 +5,114 @@
         <meta name="author" content="Beatriz">
         <meta name="description" content="project phase 1">
         <meta charset="UTF-8">
+        <link href="main.css" rel="stylesheet">
+        <script src="js/validation.js"></script>
+        <style>
+            label,p{
+                font-size: medium;
+                color: purple;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                border-radius: 4px;
+            }
+            select>option{
+                color: purple;
+                font-family: 'Courier New', Courier, monospace;
+                border-radius: 4px;
+            }
+            legend{
+                color:purple;
+                font-weight: bold;
+                font-variant: small-caps;
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration: underline;
+            }
+            fieldset{
+                border: 1px dashed white;
+                margin-right: 680px;
+            }
+            input[type=range]{
+                width: 20%;
+            }
+            input[type=number]{
+                border-radius: 4px;
+                padding: 5px;
+                color: purple;
+            }
+            textarea{
+                border-radius: 4px;
+                padding: 5px;
+                color: purple;
+            }
+            span{
+                color: red;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
         <header>
             <h1>Toronto Travel Guide</h1>
-            <hr>
         </header>
         <nav>
-            <strong><a href="Home.html"><img src="images/Home.png" width="40"></a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="ThingsToDo.html">Things to do</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="WhereToStay.html">Where to stay</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="WhereToEat.html">Where to eat</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="WhenToGo.html">When to go</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="HowToGetAround.html">How to get around</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="Survey.html">Survey</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="ContactUs.html">Contact us</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <hr>
+            <ul class="menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="ThingsToDo.html">Things to do</a></li>
+                <li><a href="WhereToStay.html">Where to stay</a></li>
+                <li><a href="WhereToEat.html">Where to eat</a></li>
+                <li><a href="WhenToGo.html">When to go</a></li>
+                <li><a href="HowToGetAround.html">How to get around</a></li>
+                <li><a href="Survey.html">Survey</a></li>
+                <li><a href="ContactUs.html">Contact us</a></li>
+            </ul><br>
         </nav>
         <main> <!--form-->
-            <h2><u>Survey</u></h3>
-            <h3><i>Help us to improve our guide!</i></h3>
+            <h2>Survey</h2>
+            <h3>Help us to improve our guide!</h3>
             <br>
-            <form name = "form1" method = "GET" action="Submitpage.html" >
+            <form name = "form2"  id="f2" method = "GET" action="Submitpage.html" >
                 <label for="t1">Age: </label>
-                <input type="number" name="age" id="t1" min="16" max="90" required><br>
-                <label for="r1">Rate your experience: </label>
-                <input type ="range" id="r1" min=0 max=10  value="0"><br><br>
+                <input type="number" name="age" id="t1">
+                <span id="t1result"></span><br>
+                <label for="b1">Rate your experience: </label>
+                <input type ="range" id="b1" value="0">
+                <span id="b1result"></span><br><br>
                 <fieldset>
                     <legend>Select your favourite topic:</legend>
-                    <select name="topic" size="5">
-                            <option selected>Things to do</option>
+                    <select id="t2"name="topic" size="5">
+                            <option>Things to do</option>
                             <option>Where to stay</option>
                             <option>Where to eat</option>
                             <option>When to go</option>
                             <option>How to get around</option>
                     </select>
+                    <span id="t2result"></span>
                 </fieldset>
                 <br>
                 <fieldset>
                     <legend>How often do you travel?</legend>
-                    <input type="radio" name="answer" value="1a2" id="r1a">
+                    <input type="radio" name="answer1" value="1a2" id="r1a">
                     <label for="r1a">1 a 2 times a year</label><br>
-                    <input type="radio" name="answer" value="2a3" id="r2a">
+                    <input type="radio" name="answer1" value="2a3" id="r2a">
                     <label for="r2a">2 a 3 times a year</label><br>
-                    <input type="radio" name="answer" value="3a4" id="r3a">
+                    <input type="radio" name="answer1" value="3a4" id="r3a">
                     <label for="r3a">3 a 4 times a year</label><br>
-                    <input type="radio" name="answer" value="more4" id="r4a">
+                    <input type="radio" name="answer1" value="more4" id="r4a">
                     <label for="r4a">More than 4 times a year</label><br>
+                    <span id="t3result"></span><br>
                 </fieldset>
                 <br>
-                <fieldset>
+                <fieldset id="t4">
                     <legend>How do you choose your destination?</legend>
-                    <input type="checkbox" name="CHK1" value="internet" id="c1a">
+                    <input type="checkbox" name="CHK1a" value="internet" id="c1a">
                     <label for="c1a">Internet</label><br>
-                    <input type="checkbox" name="CHK2" value="agencies" id="c2a">
+                    <input type="checkbox" name="CHK2a" value="agencies" id="c2a">
                     <label for="c2a">Travel agencies</label><br>
-                    <input type="checkbox" name="CHK3" value="guides" id="c3a">
+                    <input type="checkbox" name="CHK3a" value="guides" id="c3a">
                     <label for="c3a">Tourist guides</label><br>
+                    <span id="t4result"></span><br>
                  </fieldset>
                 <br>
                 <fieldset>
@@ -74,33 +125,34 @@
                     <label for="c3">Shopping guides</label><br>
                     <input type="checkbox" name="CHK4" value="fest" id="c4">
                     <label for="c4">Festivals</label><br>
+                    <span id="t5result"></span><br>
                 </fieldset>
                 <br>
                 <fieldset>
                     <legend>How did you hear about us?</legend>
-                    <input type="radio" name="answer" value="friend" id="r1">
+                    <input type="radio" name="answer2" value="friend" id="r1">
                     <label for="r1">Friend</label><br>
-                    <input type="radio" name="answer" value="google" id="r2">
+                    <input type="radio" name="answer2" value="google" id="r2">
                     <label for="r2">Google</label><br>
-                    <input type="radio" name="answer" value="insta" id="r3">
+                    <input type="radio" name="answer2" value="insta" id="r3">
                     <label for="r3">Instagram</label><br>
-                    <input type="radio" name="answer" value="travelsite" id="r4">
+                    <input type="radio" name="answer2" value="travelsite" id="r4">
                     <label for="r4">Another travel website</label><br>
+                    <span id="t6result"></span><br>
                 </fieldset>
                 <br>
                 <p>Your suggestions:</p>
-                <textarea name="comments" rows="10" cols="30" required></textarea><br><br>
-                <input type="reset" name="button2" value="Reset">
-                <input type="submit" name="button1" value="Submit survey"><br><br><hr>
+                <textarea id="t7" name="comments" rows="10" cols="80"></textarea>
+                <span id="t7result"></span><br><br>
+                <input class="button" type="reset" name="button2" value="Reset">
+                <input class="button" type="button" name="button1" value="Submit survey" onclick="validateForm2()"><br><br>
             </form>
             <br><br>
         </main>
         <footer>
-            Copyright &copy; 2021 - Agency Travel Guide 
             <hr>
-            <address>
-                <p>134 Younge Street, Toronto - Ontario</p>
-            </address>
+            Copyright &copy; 2021 - Agency Travel Guide 
+            <address>134 Younge Street, Toronto - Ontario</address>
         </footer>
     </body>
 </html>

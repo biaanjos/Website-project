@@ -5,48 +5,97 @@
         <meta name="author" content="Beatriz">
         <meta name="description" content="project phase 1">
         <meta charset="UTF-8">
+        <link href="main.css" rel="stylesheet">
+        <script type="text/javascript" src="jquery/jquery.js"></script>
+        <script type="text/javascript">
+             $("document").ready(function(){
+                //css tag legend
+                $("legend").css("color", "white");
+                $("legend").css("font-weight", "bold");
+                $("legend").css("font-variant", "small-caps");
+                $("legend").css("font-family", "Arial, Helvetica, sans-serif");
+                $("legend").css("text-decoration", "underline");
+                // css tag fieldset
+                $("fieldset").css("border", "1px dashed white");
+                // css tag li descendant of section tag
+                $("section li").css("color", "white");
+                $("section li").css("font-variant", "small-caps");
+                $("section li").css("font-family", "Arial, Helvetica, sans-serif");
+                // css tag img child of td tag
+                $("td>img").css("width", "200px");
+                //css div tags
+                $("div").css("color", "purple");
+                $("div").css("font-weight", "bold");
+                $("div").css("font-size", "medium");
+                $("div").css("font-family", "'Courier New', Courier, monospace");
+                $("div").css("font-style", "italic");
+
+                //events
+                $("a.link").hover(fun1);
+                $("img").hover(fun3);
+                $("a.link").click(fun4);
+                $("div").hover(fun5,fun6);
+
+                function fun1(){
+                    $(this).css("background-color", "white");
+                }
+                function fun3(){
+                    $(this).fadeTo(500, 0.3).fadeTo(500,1.0);
+                }
+                function fun4(){
+                    $(this).html("You have already accessed this link");
+                    $(this).animate({opacity: '0.3'});
+                }
+                function fun5(){
+                    $(this).css("color", "white");
+                }
+                function fun6(){
+                    $(this).css("color", "purple");
+                }
+            });
+        </script>
     </head>
     <body>
         <header>
             <h1>Toronto Travel Guide</h1>
-            <hr>
         </header>
         <nav>
-            <strong><a href="Home.html"><img src="images/Home.png" width="40"></a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="ThingsToDo.html">Things to do</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="WhereToStay.html">Where to stay</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="WhereToEat.html">Where to eat</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="WhenToGo.html">When to go</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="HowToGetAround.html">How to get around</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="Survey.html">Survey</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="ContactUs.html">Contact us</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <hr>
+            <ul class="menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="ThingsToDo.html">Things to do</a></li>
+                <li><a href="WhereToStay.html">Where to stay</a></li>
+                <li><a href="WhereToEat.html">Where to eat</a></li>
+                <li><a href="WhenToGo.html">When to go</a></li>
+                <li><a href="HowToGetAround.html">How to get around</a></li>
+                <li><a href="Survey.html">Survey</a></li>
+                <li><a href="ContactUs.html">Contact us</a></li>
+            </ul><br>
         </nav>
-        <h2><u>Things to do</u></h2>
+        <h2>Things to do</h2>
         <section> <!--section 1 : culture-->
             <fieldset>
-                <legend><b>Culture</b></legend>
+                <legend>Culture</legend>
                     <ul>
                         <li>Royal Ontario Museum (ROM)</li>
                             <table border="0"> 
                                 <tr>
-                                    <td><img src="images/rom.jfif" width="200"></td>
+                                    <td><img src="images/rom.jfif"></td>
                                     <td>
-                                        <div><i>&ldquo;ROM is delighted to welcome visitors to our must-see exhibitions and expansive galleries. </div>
+                                        <div>&ldquo;ROM is delighted to welcome visitors to our must-see exhibitions and expansive galleries. </div>
                                         <div>The Museum’s large physical footprint and wide-open spaces, combined with timed-ticketing and comprehensive safety</div>
-                                        <div>measures, offer a safe and welcoming place to connect and re-engage.&rdquo;</i></div><br>
-                                        <a href="https://www.rom.on.ca/en" target="_blank">More information</a>
+                                        <div>measures, offer a safe and welcoming place to connect and re-engage.&rdquo;</div><br>
+                                        <a class="link" href="https://www.rom.on.ca/en" target="_blank">More information</a>
                                     </td>
                                 </tr>
                             </table>
                          <li>Art Gallery of Ontario</li>
                             <table border="0"> 
                                 <tr>
-                                    <td><img src="images/gallery.jfif" width="200"></td>
+                                    <td><img src="images/gallery.jfif"></td>
                                     <td>
-                                        <div><i>&ldquo;The Art Gallery of Ontario (AGO) is one of the largest art museums in North America.</div>
-                                        <div>The AGO’s collection of close to 95,000 works ranges from cutting-edge contemporary art.&rdquo;</i></div><br>
-                                        <a href="https://ago.ca/" target="_blank">More information</a>
+                                        <div>&ldquo;The Art Gallery of Ontario (AGO) is one of the largest art museums in North America.</div>
+                                        <div>The AGO’s collection of close to 95,000 works ranges from cutting-edge contemporary art.&rdquo;</div><br>
+                                        <a class="link" href="https://ago.ca/" target="_blank">More information</a>
                                     </td>
                                 </tr>
                             </table>
@@ -55,28 +104,28 @@
         </section>
         <section><!--section 2: tourist attractions-->
             <fieldset>
-                <legend><b>Tourist Attractions</b></legend>
+                <legend>Tourist Attractions</legend>
                 <ul>
                     <li>CN Tower</li>
                         <table>
                             <tr>
-                                <td><img src="images/cntower.jfif" width="200"></td>
+                                <td><img src="images/cntower.jfif"></td>
                                 <td>
-                                    <div><i>&ldquo;Defining the Toronto skyline at 553.33m (1,815ft5in), the CN Tower is Canada’s most recognizable and celebrated icon.</div>
+                                    <div>&ldquo;Defining the Toronto skyline at 553.33m (1,815ft5in), the CN Tower is Canada’s most recognizable and celebrated icon.</div>
                                     <div>The CN Tower is an internationally renowned architectural triumph, an engineering Wonder of the Modern World, </div>
-                                    <div>world-class entertainment and dining destination and a must see for anyone visiting Toronto.&rdquo;</i></div><br>                              
-                                    <a href="https://www.cntower.ca/intro.html" target="_blank">More information</a>
+                                    <div>world-class entertainment and dining destination and a must see for anyone visiting Toronto.&rdquo;</div><br>                              
+                                    <a class="link" href="https://www.cntower.ca/intro.html" target="_blank">More information</a>
                                 </td>
                             </tr>
                         </table>
                     <li>City Hall</li>
                         <table>
                             <tr>
-                                <td><img src="images/cityhall.jfif" width="200"></td>
+                                <td><img src="images/cityhall.jfif"></td>
                                 <td>
-                                    <div><i>&ldquo;Toronto City Hall is the seat of municipal government and corporate head office for Canada’s largest city.</div>
-                                    <div>Its stunning, modernist architecture also makes it one of Toronto’s best known landmarks.&rdquo;</i></div><br>                              
-                                    <a href="https://www.toronto.ca/services-payments/venues-facilities-bookings/booking-city-facilities/city-hall/" target="_blank">More information</a>
+                                    <div>&ldquo;Toronto City Hall is the seat of municipal government and corporate head office for Canada’s largest city.</div>
+                                    <div>Its stunning, modernist architecture also makes it one of Toronto’s best known landmarks.&rdquo;</div><br>                              
+                                    <a class="link" href="https://www.toronto.ca/services-payments/venues-facilities-bookings/booking-city-facilities/city-hall/" target="_blank">More information</a>
                                 </td>
                             </tr>
                         </table>
@@ -85,27 +134,27 @@
         </section>
         <section><!--section 3: entertainment-->
             <fieldset>
-                <legend><b>Entertainment</b></legend>
+                <legend>Entertainment</legend>
                 <ul>
                     <li>Ripley's Aquarium</li>
                         <table>
                             <tr>
-                                <td><img src="images/aquarium.jfif" width="200"></td>
+                                <td><img src="images/aquarium.jfif"></td>
                                 <td>
-                                    <div><i>&ldquo;Immerse yourself in a world of 20,000 aquatic animals and discover your own underwater adventure.</div>
-                                    <div>The Aquarium boasts more than 5.7 million litres of water, North America’s longest underwater viewing tunnel, and more than 100 interactive opportunities!&rdquo;</i></div><br>                              
-                                    <a href="https://www.ripleyaquariums.com/canada/" target="_blank">More information</a>
+                                    <div>&ldquo;Immerse yourself in a world of 20,000 aquatic animals and discover your own underwater adventure.</div>
+                                    <div>The Aquarium boasts more than 5.7 million litres of water, North America’s longest underwater viewing tunnel, and more than 100 interactive opportunities!&rdquo;</div><br>                              
+                                    <a class="link" href="https://www.ripleyaquariums.com/canada/" target="_blank">More information</a>
                                 </td>
                             </tr>
                         </table>
                     <li>Toronto island</li>
                         <table>
                             <tr>
-                                <td><img src="images/island.jfif" width="200"></td>
+                                <td><img src="images/island.jfif"></td>
                                 <td>
-                                    <div><i>&ldquo;The Toronto Islands - also called the Island, or Toronto Island Park - is located in Lake Ontario, a 13-minute ferry ride from downtown Toronto.</div>
-                                    <div>The Island is actually a group of 15 islands inter-connected by pathways and bridges.&rdquo;</i></div><br>                              
-                                    <a href="https://www.torontoisland.com/" target="_blank">More information</a>
+                                    <div>&ldquo;The Toronto Islands - also called the Island, or Toronto Island Park - is located in Lake Ontario, a 13-minute ferry ride from downtown Toronto.</div>
+                                    <div>The Island is actually a group of 15 islands inter-connected by pathways and bridges.&rdquo;</div><br>                              
+                                    <a class="link" href="https://www.torontoisland.com/" target="_blank">More information</a>
                                 </td>
                             </tr>
                         </table>
@@ -114,11 +163,9 @@
         </section>
         <br><br>
         <footer>
-            Copyright &copy; 2021 - Agency Travel Guide 
             <hr>
-            <address>
-                <p>134 Younge Street, Toronto - Ontario</p>
-            </address>
+            Copyright &copy; 2021 - Agency Travel Guide 
+            <address>134 Younge Street, Toronto - Ontario</address>
         </footer>
     </body>
 </html>

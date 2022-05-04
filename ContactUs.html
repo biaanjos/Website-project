@@ -5,45 +5,74 @@
         <meta name="author" content="Beatriz">
         <meta name="description" content="project phase 1">
         <meta charset="UTF-8">
+        <link href="main.css" rel="stylesheet">
+        <script src="js/validation.js"></script>
+        <style>
+            label,p{
+                font-size: medium;
+                color: purple;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+            }
+            input[type=text], input[type=email] {
+                width: 20%;
+                padding: 5px;
+                border-radius: 4px;
+                color: purple;
+            }
+            textarea{
+                border-radius: 4px;
+                padding: 5px;
+                color: purple;
+            }
+            span{
+                color: red;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
         <header>
             <h1>Toronto Travel Guide</h1>
-            <hr>
         </header>
         <nav>
-            <strong><a href="Home.html"><img src="images/Home.png" width="40"></a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="ThingsToDo.html">Things to do</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="WhereToStay.html">Where to stay</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="WhereToEat.html">Where to eat</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="WhenToGo.html">When to go</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="HowToGetAround.html">How to get around</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="Survey.html">Survey</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="ContactUs.html">Contact us</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <hr>
+            <ul class="menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="ThingsToDo.html">Things to do</a></li>
+                <li><a href="WhereToStay.html">Where to stay</a></li>
+                <li><a href="WhereToEat.html">Where to eat</a></li>
+                <li><a href="WhenToGo.html">When to go</a></li>
+                <li><a href="HowToGetAround.html">How to get around</a></li>
+                <li><a href="Survey.html">Survey</a></li>
+                <li><a href="ContactUs.html">Contact us</a></li>
+            </ul><br>
         </nav>
         <main>
-            <h2><u>Contact us</u></h2>
-            <form name = "form1" method = "GET" action="Submitpage.html" >
-                <label for="t1">First Name: </label>
-                <input type="text" name="fn" id="t1" maxlength="20"><br>
-                <label for="t2">Last Name: </label>
-                <input type="text" name="ln" id="t2" maxlength="20" placeholder="only one last name"><br>
-                <label for="t3">E-mail: </label>
-                <input type="email" name="em"  id="t3" required><br>
+            <h2>Contact us</h2>
+            <form id="f1" name = "form1" method = "GET" action="Submitpage.html" >
+                <label for="t1">First Name: </label><br>
+                <input type="text" name="fn" id="t1" maxlength="20">
+                <span id="t1result"></span><br>
+                <label for="t2">Last Name: </label><br>
+                <input type="text" name="ln" id="t2" maxlength="20" placeholder="only one last name">
+                <span id="t2result"></span><br>
+                <label for="t3">E-mail: </label><br>
+                <input type="email" name="em"  id="t3">
+                <span id="t3result"></span><br>
                 <p>Your comments here:</p>
-                <textarea name="comments" rows="10" cols="30" required></textarea><br><br>
-                <input type="reset" name="button2" value="Reset">
-                <input type="submit" name="button1" value="Click here to submit"><br><br><hr>
+                <textarea id="t4" name="comments" rows="10" cols="80"></textarea>
+                <span id="t4result"></span><br><br>
+                <input class="button" type="reset" name="button2" value="Reset">
+                <input class="button" type="button" name="button1" value="Submit" onclick="validateForm1()"><br><br>
             </form>
             <br><br><br>
         </main>
         <footer>
-            Copyright &copy; 2021 - Agency Travel Guide 
             <hr>
-            <address>
-                <p>134 Younge Street, Toronto - Ontario</p>
-            </address>
+            Copyright &copy; 2021 - Agency Travel Guide 
+            <address>134 Younge Street, Toronto - Ontario</address>
         </footer>
     </body>
 </html>

@@ -5,33 +5,75 @@
         <meta name="author" content="Beatriz">
         <meta name="description" content="project phase 1">
         <meta charset="UTF-8">
+        <link href="main.css" rel="stylesheet">
+        <style>
+            main li,p{
+                font-size: medium;
+                color: purple;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-style: italic;
+            }
+            h4{
+                color:white;
+                font-weight: bold;
+                font-variant: small-caps;
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration: underline;
+            }
+            table{
+                background-color:lightsteelblue;
+                border-style: double;
+                border-radius: 10px 10px 10px 10px;
+                box-shadow: 4px 4px 4px 4px lightslategrey;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            td{
+                font-size: medium;
+                color: gray;
+                text-align: center;
+            }
+            td.title{
+                color: royalblue;
+                font-variant: small-caps;
+                text-align: center;
+                font-weight: bold;
+                text-decoration: royalblue underline overline;
+            }
+            @media screen and (max-width:600px){
+                table{
+                   background-color: lightpink;
+                }
+            }
+        </style>
     </head>
     <body>
         <header>
             <h1>Toronto Travel Guide</h1>
-            <hr>
         </header>
         <nav>
-            <strong><a href="Home.html"><img src="images/Home.png" width="40"></a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="ThingsToDo.html">Things to do</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="WhereToStay.html">Where to stay</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="WhereToEat.html">Where to eat</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="WhenToGo.html">When to go</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="HowToGetAround.html">How to get around</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="Survey.html">Survey</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <strong><a href="ContactUs.html">Contact us</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;
-            <hr>
+            <ul class="menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="ThingsToDo.html">Things to do</a></li>
+                <li><a href="WhereToStay.html">Where to stay</a></li>
+                <li><a href="WhereToEat.html">Where to eat</a></li>
+                <li><a href="WhenToGo.html">When to go</a></li>
+                <li><a href="HowToGetAround.html">How to get around</a></li>
+                <li><a href="Survey.html">Survey</a></li>
+                <li><a href="ContactUs.html">Contact us</a></li>
+            </ul><br>
         </nav>
         <main>
-            <h2><u>When to go</u></h2>
-            <table border="1">
+            <h2>When to go</h2>
+            <table>
                 <tr>
-                    <td colspan="3"><b>Monthly Average Temperature</b></td>
+                    <td class="title" colspan="3">Monthly Average Temperature</td>
                 </tr>
                 <tr>
-                    <td><b>Month</b></td>
-                    <td><b>High Temperature (&deg;C)</b></td>
-                    <td><b>Low Temperature (&deg;C)</b></td>
+                    <td class="title">Month</td>
+                    <td class="title">High Temperature (&deg;C)</td>
+                    <td class="title">Low Temperature (&deg;C)</td>
                 </tr>
                 <tr>
                     <td>January</td>
@@ -43,6 +85,7 @@
                     <td>0&deg;</td>
                     <td>-6&deg;</td>
                 </tr>
+                <tr>
                     <td>March</td>
                     <td>5&deg;</td>
                     <td>-2&deg;</td>
@@ -114,11 +157,9 @@
                 </ul>
         </main><br><br>
         <footer>
-            Copyright &copy; 2021 - Agency Travel Guide 
             <hr>
-            <address>
-                <p>134 Younge Street, Toronto - Ontario</p>
-            </address>
+            Copyright &copy; 2021 - Agency Travel Guide 
+            <address>134 Younge Street, Toronto - Ontario</address>
         </footer>
     </body>
 </html>

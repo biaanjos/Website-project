@@ -1,0 +1,82 @@
+body{
+    background-color: lightblue;
+    background-image: url("images/background.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    border: 1px solid white;
+    margin: 15px;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color:purple;
+    text-shadow: -4px -4px 2px plum;
+    font-size: 50px;
+}
+h2,h3{
+    color:white;
+    font-variant: small-caps;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+}
+footer{
+    font-size: small;
+    font-style: italic;
+    font-family: sans-serif;
+    text-align: center;
+    color: gray;
+}
+img{
+    border:2px dotted lightblue;
+}
+a[href]{
+    font-weight: bold;
+    color:white;
+}
+a:visited{
+    color: purple;
+}
+a:hover{
+    color: blue;
+}
+a:focus{
+    color: palevioletred;
+}
+hr{
+    color: white;
+}
+.button{
+    background-color: royalblue;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    border-radius: 12px;
+    width: 200px;
+}
+.button:hover{
+    background-color: purple;
+    color: white;
+}
+ul.menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    display:flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+}
+ul.menu>li{
+    display: inline;
+    padding: 8px;
+    float: left;
+    border-right: 1px solid #bbb;
+}
+ul.menu>li:last-child {
+    border-right: none;
+  }
+nav a[href]{
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 20px;
+}
